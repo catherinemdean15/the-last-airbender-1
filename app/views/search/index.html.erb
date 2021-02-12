@@ -2,10 +2,10 @@
 
 <h3>Totla Members: <%= @members.total_members %> </h3>
 
-<table id="top-25">
+<table id="first-25">
   <% @members.make_members.each do |member| %>
     <tr>
-      <%= image_tag "#{member.photo}" %><br>
+      <td><%= image_tag "#{member.photo}" %><td>
       <td><b>Name: <%= member.name %></b><td>
       <td>Allies: <%= member.allies %> </td>
       <td>Enemies: <%= member.enemies %> </td>
