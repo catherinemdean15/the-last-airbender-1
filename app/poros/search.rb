@@ -7,8 +7,9 @@ class Search
   end
 
   def make_members
-    @data.map do |member|
+    members = @data.map do |member|
       Member.new(member)
     end
+    members.first(25)
   end
 end
