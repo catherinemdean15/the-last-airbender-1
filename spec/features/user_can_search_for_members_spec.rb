@@ -10,8 +10,12 @@ RSpec.describe 'root page' do
 
     expect(current_path).to eq(search_path)
 
-    expect(page).to have_content('20')
-    expect(page).to have_css('table#top-25 tr', count: 20)
-    expect(page).to_not have_css('table#top-25 tr', count: 26)
+    expect(page).to have_content('97')
+    expect(page).to have_content('Afiko')
+    expect(page).to have_content('Allies: Fire Nation')
+    expect(page).to have_content('Enemies: Aang')
+    expect(page).to have_content('Affiliation: Fire Nation')
+    expect(page).to have_css('table#first-25 tr', count: 25)
+    expect(page).to_not have_css('table#first-25 tr', count: 26)
   end
 end
