@@ -1,0 +1,16 @@
+<h1>Members of the <%= @nation %> </h1>
+
+<h3>Totla Members: <%= @members.total_members %> </h3>
+
+<table id="top-25">
+  <% @members.make_members.each do |member| %>
+    <tr>
+      <%= image_tag "#{member.photo}" %><br>
+      <td><b>Name: <%= member.name %></b><td>
+      <td>Allies: <%= member.allies %> </td>
+      <td>Enemies: <%= member.enemies %> </td>
+      <td>Affilitaion: <%= member.affiliation %> </td>
+      <br><br>
+    </tr>
+  <% end %>
+</table>
