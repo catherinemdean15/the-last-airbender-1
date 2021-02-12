@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
   def index
-    @nation = params[:nation]
-    @members = SearchFacade.search_for_members(@nation)
+    @members = SearchFacade.search_for_fire_nation if params[:nation] == fire_nation
+    # named search_for_fire_nation for futue functionality of searching for other nations
   end
 end
